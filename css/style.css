@@ -1,0 +1,150 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: #121417;
+  color: white;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 85%;
+  }
+}
+.container .card {
+  background-image: radial-gradient(circle at 50% 0, #232a34, #171e28);
+  border-radius: 15px;
+  max-width: 412px;
+  padding: 32px;
+  box-shadow: rgba(0, 0, 0, 0.726) 0 0 10px 0;
+  transition: .3s;
+}
+.container .card.card-rating.hidden {
+  transform: translateY(2rem);
+  opacity: 0;
+}
+.container .card .card-header .star {
+  background-color: #252d37;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card .card-header .star i {
+  color: #fb7413;
+  font-size: 18px;
+}
+.container .card-body .title {
+  font-weight: 700;
+  font-size: 1.75rem;
+  padding: 37px 0 25px 0;
+}
+.container .card-body .text {
+  color: #959eac;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.container .rating {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+.container .rating .number {
+  color: #959eac;
+  background-color: #252d37;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s;
+}
+.container .rating .number:hover {
+  background-color: #959eac;
+  color: white;
+}
+.container .rating .number.active {
+  background-color: #fb7413;
+  color: white;
+}
+.container .submit {
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: .75rem 0;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #fb7413;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: .7rem;
+  transition: .3s;
+}
+.container .submit:hover {
+  color: #fb7413;
+  background-color: white;
+}
+
+.card.card-success {
+  text-align: center;
+  transform: translateY(2rem);
+  opacity: 0;
+  transition: .3s;
+  display: none;
+}
+.card.card-success * {
+  margin: 0 auto;
+}
+.card.card-success .img {
+  width: 10.8rem;
+  margin-bottom: 2rem;
+}
+.card.card-success .img img {
+  width: 100%;
+}
+.card.card-success .thank-you {
+  margin-bottom: 1rem;
+}
+.card.card-success .card-result {
+  background-color: #252d37;
+  color: #fb7413;
+  font-size: 1.1rem;
+  padding: .5rem 1.5rem;
+  border-radius: 25px;
+  display: inline-block;
+  margin-bottom: 2.2rem;
+}
+.card.card-success .text {
+  color: #959eac;
+  line-height: 1.5;
+  font-size: .9rem;
+  max-width: 20.5rem;
+}
+.card.card-success.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*# sourceMappingURL=style.css.map */
